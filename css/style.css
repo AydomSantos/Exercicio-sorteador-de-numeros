@@ -1,0 +1,212 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root{
+    --color-text: #007BFF;
+    --font-size-h2: 2.5rem;
+    --largura-box:  50.875em;
+}
+
+/* Estilos globais */
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 123, 255, 0.4);
+}
+
+/* Estrutura principal */
+.main .container{
+    width: var(--largura-box);
+    padding: 2rem;
+    display: flex;
+    background: #FDFBFB;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.main .container:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), /* Sombra mais suave */
+                0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais escura */
+    
+}
+
+/* Título */
+.main .container .box .box__titulo{
+    font-size: var(--font-size-h2);
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Formulário */
+.main .container .box .box__form{
+    padding: 1rem 0;
+    line-height: 2;
+    width: 100%;
+    border-bottom: #007BFF 1px solid;
+}
+
+.main .container .box .box__form .box__form--box__label{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.main .container .box .box__form .box__form--box__label .box__label{
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.main .container .box .box__form .box__form--box__label .box__input{
+    width: 48px;
+    padding: 0.5rem ;
+    border: none;
+    background: #72adec;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    
+}
+
+/* Botões */
+.main .container .box .box__form .box__form--btn {
+    display: flex;
+    margin-top: 1rem;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.main .container .box .box__form .box__form--btn .box__form--btn--sortear,
+.main .container .box .box__form .box__form--btn .box__form--btn--reniciar {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.8rem;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+    margin-top: 1rem;
+}
+
+/* Resultado */
+.main .container .box .box__resultado {
+    margin-top: 1rem;
+}
+
+.main .container .box .box__resultado .box__resultado--span {
+    color: #007BFF;
+}
+
+.main .container .box .box__resultado .box__resultado--text {
+    margin-top: 0.5rem;
+    color: #588dc5;
+}
+
+/* Imagem */
+.main .container  .box__img img{
+    width: 444px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .main .container {
+        width: 95%;
+        padding: 1rem;
+        margin: 0 auto;
+        
+    }
+
+    .main .container .box .box__form{
+        width: 100%;
+    }
+
+    .main .container .box .box__titulo {
+        font-size: 2rem;
+    }
+
+    .main .container .box .box__form .box__form--box__label .box__input {
+        padding: 0.5rem;
+    }
+
+    
+        
+
+    .main .container .box .box__form .box__form--btn .box__form--btn--sortear,
+    .main .container .box .box__form .box__form--btn .box__form--btn--reniciar {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .main .container  .box__img img{
+        display: none;
+    }
+    
+}
+
+
+
+@media (max-width: 576px) {
+    .main .container {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0 auto;
+    }
+
+    .main .container .box .box__titulo {
+        font-size: 1.5rem; 
+        text-align: center; 
+    }
+
+    .main .container .box .box__form {
+        padding: 0.5rem 0; 
+        width: 100%;
+    }
+
+    .main .container .box .box__form .box__form--box__label {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .main .container .box .box__form .box__form--box__label .box__label {
+        margin-bottom: 0.5rem; 
+    }
+
+    .main .container .box .box__form .box__form--box__label .box__input {
+        width: 100%; 
+        padding: 0.5rem; 
+    }
+
+    .main .container .box .box__form .box__form--btn {
+        flex-direction: column; 
+        align-items: stretch; 
+        width: 100%; 
+    }
+
+    .main .container .box .box__form .box__form--btn .box__form--btn--sortear,
+    .main .container .box .box__form .box__form--btn .box__form--btn--reniciar {
+        width: 100%; 
+        margin-bottom: 0.5rem; 
+    }
+
+    .main .container .box__resultado {
+        text-align: center; 
+        font-size: 1rem; 
+    }
+
+    .main .container .box__img img {
+        display: none; 
+    }
+}
